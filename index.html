@@ -40,6 +40,36 @@ var map=new google.maps.Map(document.getElementById("googleMap")
     	position: myLatlng
   });
   
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">MUST</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Mindanao University of Science and Technology</b>,  commonly known as MUST is a higher education institution in the Philippines. ' +
+      ' It was known as Mindanao Polytechnic State College'+
+      'until 7 January 2009 when it has achieved its university status after a long  '+
+      'odyssey from its humble beginnings as a tradeschool in 1927.</br>'+
+      'The university offers graduate and undergraduate degrees in engineering, '+
+      'science and technology with over 40 bachelors degree programs, '+
+      '16 masters degree programs and 3 doctors degree programs.</br>'+
+      'Its main campus is located in Lapasan, Cagayan de Oro City,'+
+      'with satellite campuses in Jasaan, Misamis Oriental, Oroquieta city'+
+      'and Panaon, Misamis Occidental.'+
+      '<p>Attribution:<a href="http://en.wikipedia.org/wiki/Mindanao_University_of_Science_and_Technology">'+
+      'http://en.wikipedia.org/wiki/Mindanao_University_of_Science_and_Technology</a> '+
+      '</p>'+
+      '</div>'+
+      '</div>';
+var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+  
+  
+  //marker listener will respond when clicked through calling a function
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
+  
 }
 //loading the map by calling the function "initialize"
 google.maps.event.addDomListener(window, 'load', initialize);
