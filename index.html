@@ -30,6 +30,14 @@ var map=new google.maps.Map(document.getElementById("googleMap")
 		document.getElementById('latclicked').value = event.latLng.lat()
 		document.getElementById('longclicked').value = event.latLng.lng()  
 		});
+	//adding marker
+	var myLatlng=new google.maps.LatLng(8.485827749602816,124.65616285800934);	
+	marker = new google.maps.Marker({
+    	map:map,
+    	draggable:false,
+    	animation: google.maps.Animation.DROP,
+    	position: myLatlng
+  });
   
 }
 //loading the map by calling the function "initialize"
