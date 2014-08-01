@@ -15,10 +15,22 @@ var mapProp = {
   zoom:5,
   mapTypeId:google.maps.MapTypeId.ROADMAP
   };
-  
   //initializing new map by calling it from Google API, with an ID parameter which is the id of our div
 var map=new google.maps.Map(document.getElementById("googleMap")
   ,mapProp);
+  
+  		//get latlng when hovered
+		 google.maps.event.addListener(map,'mousemove',function(event) {
+		document.getElementById('lat').value =event.latLng.lat()
+		document.getElementById('lng').value =event.latLng.lng()
+		});
+		
+		//get latlng thru click
+		google.maps.event.addListener(map,'click',function(event) {
+		document.getElementById('latclicked').value = event.latLng.lat()
+		document.getElementById('longclicked').value = event.latLng.lng()  
+		});
+  
 }
 //loading the map by calling the function "initialize"
 google.maps.event.addDomListener(window, 'load', initialize);
