@@ -11,7 +11,7 @@ function initialize()
   //set our map properties such as ZOOM, MAPTYPE, and THE LATLNG
   //or the latitude and longitude where our map centers when loaded
 var mapProp = {
-  center:new google.maps.LatLng(8.485827749602816,124.65616285800934),
+  center:new google.maps.LatLng(8.476781440797335,124.64992672204971),
   zoom:15,
   mapTypeId:google.maps.MapTypeId.ROADMAP
   };
@@ -31,7 +31,7 @@ var map=new google.maps.Map(document.getElementById("googleMap")
 		document.getElementById('longclicked').value = event.latLng.lng()  
 		});
 	//adding marker
-	var myLatlng=new google.maps.LatLng(8.485827749602816,124.65616285800934);	
+	var myLatlng=new google.maps.LatLng(8.476781440797335,124.64992672204971);	
 	marker = new google.maps.Marker({
     	map:map,
     	draggable:false,
@@ -45,20 +45,9 @@ var map=new google.maps.Map(document.getElementById("googleMap")
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">MUST</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">AMA Computer College - Cagayan de Oro</h1>'+
       '<div id="bodyContent">'+
-      '<p><b>Mindanao University of Science and Technology</b>,  commonly known as MUST is a higher education institution in the Philippines. ' +
-      ' It was known as Mindanao Polytechnic State College'+
-      'until 7 January 2009 when it has achieved its university status after a long  '+
-      'odyssey from its humble beginnings as a tradeschool in 1927.</br>'+
-      'The university offers graduate and undergraduate degrees in engineering, '+
-      'science and technology with over 40 bachelors degree programs, '+
-      '16 masters degree programs and 3 doctors degree programs.</br>'+
-      'Its main campus is located in Lapasan, Cagayan de Oro City,'+
-      'with satellite campuses in Jasaan, Misamis Oriental, Oroquieta city'+
-      'and Panaon, Misamis Occidental.'+
-      '<p>Attribution:<a href="http://en.wikipedia.org/wiki/Mindanao_University_of_Science_and_Technology">'+
-      'http://en.wikipedia.org/wiki/Mindanao_University_of_Science_and_Technology</a> '+
+      '<p><b>AMA Computer College - Cagayan de Oro</b>,   is the 1st and largest ICT University in Asia and the pioneer of computer education in the Philippines. ' +
       '</p>'+
       '</div>'+
       '</div>';
